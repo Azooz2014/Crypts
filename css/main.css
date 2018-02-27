@@ -44,6 +44,12 @@ body{
 	
 }
 
+#monitor{
+
+	animation: monitorIn 1s ease-in-out forwards;
+	opacity: 0;
+}
+
 #logo{
 
 	width: 130px;
@@ -88,15 +94,52 @@ h1{
 	
 	margin-top: -5%;
 	margin-left: 16%;
-	
+	animation: chatblips .5s ease-in-out 2.7s forwards;
+	opacity: 0;
+	z-index: 2;
 }
 #btc{
 	
 	margin-top: 10%;
 	margin-left: -1.5%;
+	animation: chatblips .5s ease-in-out 1.9s forwards;
+	opacity: 0;
+	z-index: 2;
 }
 #dash{
 	
 	margin-top: 14%;
 	margin-left: 28%;
+	animation: chatblips .5s ease-in-out .8s forwards;
+	opacity: 0;
+	z-index: 2;
+}
+
+@keyframes monitorIn{
+	from{
+		transform: translateY(-30px);
+		opacity: 0;
+	}
+	to{
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+@keyframes chatblips{
+	0%{
+	opacity: 0;
+	transform: scale(.3);
+  }
+  50%{
+	opacity: 1;
+	transform: scale(1.0);
+  }
+  70%{
+	transform: scale(0.9);
+  }
+  100%{
+	transform: scale(1);
+	opacity: 1;
+  }
 }
